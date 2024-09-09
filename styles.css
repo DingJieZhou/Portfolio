@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Prata&display=swap');@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Prata&display=swap');
+
+body {
+    cursor: url('cursor.png'), auto;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: white;
+    text-transform: uppercase;
+}
+
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    width: -moz-available;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 5%;
+    font-weight: 400;
+}
+
+.navbar .nav-buttons {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    flex-wrap: wrap; 
+}
+
+.navbar .btn {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2vw;
+    padding: 10px 20px;
+    transition: color 0.3s, text-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap; 
+    flex-shrink: 0; 
+}
+
+
+.navbar .btn:hover {
+    color: transparent; 
+    text-shadow: 0 0 3px white; 
+}
+
+.nav-buttons .btn.active {
+    text-decoration: underline;
+}
+
+#myVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover; 
+}
+
+.section {
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center; 
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes slideOutDown {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+.font1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: -4px;
+}
+
+.font2 {
+    font-family: "Noto Serif Display", serif;
+    font-size: 8rem;
+    font-weight: 300;
+    letter-spacing: -5px;
+}
+
+.font3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    text-transform: lowercase;
+    font-size: 2rem;
+    vertical-align: top;
+    position: relative;
+    top: 20px;
+}
+
+.font4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    text-transform: lowercase;
+    font-size: 2rem;
+    vertical-align: top;
+    position: relative;
+    top: 20px;
+}
+
+.font5 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    text-transform: lowercase;
+    font-size: 2rem;
+    vertical-align: top;
+    position: relative;
+    top: 10px;
+}
+
+.font6 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2vw;
+    font-weight: 300;
+    position: relative;
+    top: 4px;
+    padding-right: 12px;
+    letter-spacing: 2px;
+}
+
+.font7 {
+    font-family: "Noto Serif Display", serif;
+    font-size: 1.2vw;
+    font-weight: 300;
+    letter-spacing: 0px;
+}
+
+h1 {
+    font-size: 8rem;
+    margin: 0;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    line-height: 0.93;
+    opacity: 0;
+    transform: translateX(0);
+}
+
+h1:nth-of-type(1) {
+    animation-duration: 2s;
+    animation-delay: 0s;
+}
+
+h1:nth-of-type(2) {
+    animation-duration: 2s;
+    animation-delay: 0.4s;
+}
+
+h1:nth-of-type(3) {
+    animation-duration: 2s;
+    animation-delay: 0.8s;
+}
+
+h1:nth-of-type(4) {
+    animation-duration: 2s;
+    animation-delay: 1.2s;
+}
+
+
+.slide-in-left {
+    animation-name: slideInLeft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.slide-in-right {
+    animation-name: slideInRight;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+p {
+    font-size: 1.5rem;
+    line-height: 48px;
+}
+
+h2 {
+    margin-top: 0px;
+    font-size: 2.2rem;
+    font-weight: 300;
+}
+
+.link {
+    display:inline;
+    font-size: 30px;
+    color: white;
+    
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.logo{
+    text-decoration: none; 
+    color: white;
+}
+
+.content1 {
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 15%;
+}
+
+.content {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin: 0 0 10% 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.content img {
+    flex-shrink: 0; 
+}
+
+
+.about-image {
+    width: 25%;
+    height: 100%;
+    border-radius: 7%;
+    margin-right: 80px;
+    margin-top: 40px;
+    z-index: 1;
+    transition: opacity 4s ease; 
+    
+}
+
+.about-text {
+    height: 500px;
+    max-width: 405px;
+    font-weight: 200;
+    text-align: left;
+    margin:30px 10px 0 10px;
+}
+
+.work-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    text-transform: none;
+    width: 360px;
+    height: 170px;
+    font-weight: 200;
+    padding: 30px;
+    text-align: left;
+    margin: 0 20px;
+}
+
+.left-image {
+    width: 380px;
+}
+
+.right-image {
+    width: 380px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1.5s forwards;
+}
+
+.fade-out {
+    animation: fadeOut 1.5s forwards;
+}
+
+.contact-image {
+    width: 100%;
+    height: 500px;
+    border-radius: 10%;
+    margin-right: 20px;
+    transform: scale(1.2) rotate(-4deg);
+    z-index: -1;
+}
+
+.left-image{
+    height: 230px;
+    margin-right: 170px;
+    transform: scale(1.2) rotate(9deg);
+}
+
+.right-image{
+    height: 230px;
+    margin-right: 170px;
+    transform: scale(1.2) rotate(-9deg);
+}
+
+
+.fade-in {
+    opacity: 2;
+    transform: translateY(0); 
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(1000%); 
+    transition: opacity 1s, transform 1.5s; 
+}
+
+.contact-buttons .link {
+    font-size: 3rem; 
+    color: white; 
+    text-decoration: none; 
+    padding: 10px; 
+}
+
+.contact-buttons.show {
+    opacity: 1;
+    transform: translateY(0);
+}
